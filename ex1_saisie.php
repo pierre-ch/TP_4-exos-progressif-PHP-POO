@@ -21,7 +21,7 @@
                             <a class="nav-link active" aria-current="page" href="ex1_saisie.php">Ex1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Ex2</a>
+                            <a class="nav-link" href="ex2_saisie.php">Ex2</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled">Ex3</a>

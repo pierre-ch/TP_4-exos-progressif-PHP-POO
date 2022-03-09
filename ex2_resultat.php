@@ -18,10 +18,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="ex1_saisie.php">Ex1</a>
+                            <a class="nav-link" aria-current="page" href="ex1_saisie.php">Ex1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ex2_saisie.php">Ex2</a>
+                            <a class="nav-link active" aria-current="page" href="#">Ex2</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled">Ex3</a>
@@ -37,7 +37,7 @@
     <body>
         <div class="container-sm">
             <?php
-                include('ex1_produit.php');
+                include('ex2_produit.php');
                 $nom = $_GET['nom'];
                 $prix = $_GET['prix'];
                 echo "<br><h3>Ajout produit : ".$nom."</h3><br>";

@@ -18,10 +18,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="ex1_saisie.php">Ex1</a>
+                            <a class="nav-link" href="ex1_saisie.php">Ex1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ex2_saisie.php">Ex2</a>
+                            <a class="nav-link active" aria-current="page" href="#">Ex2</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled">Ex3</a>
@@ -35,20 +35,22 @@
         </nav>
     </header>
     <body>
-        <div class="container-sm">
-            <?php
-                include('ex1_produit.php');
-                $nom = $_GET['nom'];
-                $prix = $_GET['prix'];
-                echo "<br><h3>Ajout produit : ".$nom."</h3><br>";
-            
-                $produit = new Produit(0,$nom,$prix);
-                echo 'Le code du produit : '.$produit-> GetCode().'<br>';  
-                echo 'Le nom du produit : '.$produit-> GetNom().'<br>';
-                echo 'Le prix du produit : '.$produit-> GetPrix().'<br>';
-            ?>
+    <div class="container-sm">
+        <br>
+        <h3>Ajout produit</h3>
+        <br>
+        <form action=ex2_resultat.php method=GET>
+            <div class="mb-3">
+                <label for="exampleTextInput" class="form-label">Produit</label>
+                <input type="text" class="form-control" name="nom">
+            </div>
+            <div class="mb-3">
+                <label for="exampleNumberInput" class="form-label">Prix</label>
+                <input type="number" class="form-control" name="prix">
+            </div>
             <br>
-            <button type="button" class="btn btn-secondary" onclick="history.back()">Retour</button>
-        </div>
+            <button type="submit" class="btn btn-primary">Rechercher</button>
+        </form>
+    </div>
     </body>
 </html>
